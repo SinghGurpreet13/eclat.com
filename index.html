@@ -1,0 +1,263 @@
+//SATNAM SHRI WAHEGURU JI SATNAM SHRI WAHEGURU JI SATNAM SHRI WAHEGURU JI SATNAM SHRI WAHEGURU JI SATNAM SHRI WAHEGURU JI SATNAM SHRI WAHEGURU JI SATNAM SHRI WAHEGURU JI SATNAM SHRI WAHEGURU JI SATNAM SHRI WAHEGURU JI SATNAM SHRI WAHEGURU JI SATNAM SHRI WAHEGURU JI SATNAM SHRI WAHEGURU JI SATNAM SHRI WAHEGURU JI SATNAM SHRI WAHEGURU JI
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Modern Website</title>
+    <link rel="stylesheet" href="s1.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const prevButton = document.querySelector('.prev');
+            const nextButton = document.querySelector('.next');
+            const carousel = document.querySelector('.carousel');
+            const slides = document.querySelectorAll('.slide');
+
+            let index = 0;
+
+            function showSlide(i) {
+                index = (i + slides.length) % slides.length;
+                carousel.style.transform = `translateX(${-index * 100}%)`;
+            }
+
+            prevButton.addEventListener('click', () => showSlide(index - 1));
+            nextButton.addEventListener('click', () => showSlide(index + 1));
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+        }
+
+        header nav {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            
+        }
+
+        .logo-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .logo-section img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10%;
+        }
+
+        .advertisement {
+            display: flex;
+            align-items: center;
+        }
+
+        .ad-image {
+            flex: 1;
+        }
+
+        .ad-content {
+            flex: 2;
+            margin-left: -20px; /* Adjust this value to move the text closer to the image */
+        }
+
+        .carousel-wrapper {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .description-block {
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer nav ul li {
+            margin: 0 15px;
+        }
+
+        footer nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ECLAT</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="a2.html">Products</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="video-section">
+        <video autoplay muted loop>
+            <source src="hpv1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-text"></div>
+    </section>
+    <main>
+        <section class="carousel-section">
+            <h1 class="carousel-title">The latest Eclat - Elevate Your Style, Protect Your Eyes, Sustain the Planet.</h1>
+            <div class="carousel-wrapper">
+                <button class="prev">&#10094;</button>
+                <div class="carousel">
+                    <div class="slide">
+                        <img src="corousal1.jfif" alt="Ad 1">
+                        <div class="slide-content">
+                            <h2>Pre-order now.</h2>
+                            <p>Available from 27 July</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="corousal2.jfif" alt="Ad 2">
+                        <div class="slide-content">
+                            <h2>Limited Time Offer - Don't Miss Out!</h2>
+                            <p>From £999</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="corousal3.jfif" alt="Ad 3">
+                        <div class="slide-content">
+                            <h2>Save on</h2>
+                            <p>Get a gift card for up to £120, 20% off AppleCare+, and more.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="corousal4.jfif" alt="Ad 4">
+                        <div class="slide-content">
+                            <h2>🔥 Winter Sale Alert! 🔥</h2>
+                            <p>Up to 50% Off on All Sunglasses! From £599</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="next">&#10095;</button>
+            </div>
+        </section>
+        <section class="logo-section">
+            <img src="eclat.jfif" alt="Company Logo">
+        </section>
+    </main>
+    <section class="advertisement">
+        <div class="ad-content">
+            <h1>ECLAT</h1>
+            <ul class="ad-list">
+                <li><span>01</span> Innovative and Stylish Designs</li>
+                <li><span>02</span> Feel Free to Freestyle</li>
+                <li><span>03</span> Exclusive UV Protection Technology</li>
+                <li><span>04</span> Unmatched Style and Elegance</li>
+                <li><span>05</span> Superior Protection and Comfort</li>
+            </ul>
+        </div>
+    </section>
+    <div class="content">
+        <div class="description-block">
+            <p>
+                Why Eclat?
+                <br>
+
+                -Style: Timeless elegance with a contemporary twist.<br>
+                -Quality: High-quality materials for durability and comfort.<br>
+                -Sustainability: Committed to eco-friendly practices.<br>
+                Eclat is a distinguished name in the world of premium sunglasses, known for its impeccable blend of style, sophistication, and cutting-edge technology. At Eclat, we believe that sunglasses are more than just an accessory; they are a statement of individuality and an essential element of one’s personal style. Our mission is to craft eyewear that not only protects your eyes but also elevates your look, making you stand out in any crowd.
+                Eclat's collection is designed for the discerning individual who values both fashion and function. Each pair of sunglasses is meticulously crafted using the finest materials, including high-quality metals, durable plastics, and innovative composite materials. Our lenses are made with advanced technology to provide superior clarity, UV protection, and scratch resistance. We understand the importance of eye health and ensure that our products meet the highest standards of optical performance.
+                Our design philosophy is rooted in timeless elegance with a contemporary twist. Eclat sunglasses feature clean lines, sophisticated colors, and unique design elements that cater to a variety of tastes and preferences. Whether you prefer classic aviators, bold oversized frames, or sleek minimalist styles, Eclat has something to suit every face shape and fashion sensibility.
+                Eclat is committed to sustainability and ethical practices. We strive to minimize our environmental impact by using eco-friendly materials and processes. Our packaging is designed to be both stylish and sustainable, reflecting our dedication to preserving the planet for future generations.
+                Customer satisfaction is at the heart of everything we do. We offer personalized services, including custom fittings and styling consultations, to ensure that every customer finds their perfect pair of sunglasses. Our exceptional customer service team is always ready to assist with any inquiries or concerns, providing a seamless and enjoyable shopping experience.
+                Discover the world through Eclat sunglasses and experience the perfect fusion of luxury, innovation, and style. With Eclat, you don’t just wear sunglasses; you make a statement.
+            </p>
+        </div>
+    </div>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li> <a href="PRIVACY POLICY ECLAT.pdf" target="_blank" class="button">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 ECLAT. All rights reserved.</p>
+    </footer>
+</body>
+</html>
